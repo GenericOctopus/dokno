@@ -8,12 +8,6 @@ module Dokno
       g.test_framework :rspec
     end
 
-    initializer :append_migrations do |app|
-      config.paths["db/migrate"].expanded.each do |expanded_path|
-        app.config.paths["db/migrate"] << expanded_path
-      end
-    end
-
     initializer 'Dokno precompile', group: :all do |app|
       app.config.assets.precompile << "dokno_manifest.js"
     end

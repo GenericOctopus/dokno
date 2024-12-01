@@ -20,6 +20,7 @@ $ bundle
 
 Run Dokno migrations to add the Dokno article and category tables to your db:
 ```bash
+$ rails generate dokno:migration
 $ rake db:migrate
 ```
 
